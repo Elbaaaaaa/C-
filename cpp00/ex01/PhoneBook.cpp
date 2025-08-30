@@ -6,7 +6,7 @@
 /*   By: ebella <ebella@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/24 17:30:24 by ebella            #+#    #+#             */
-/*   Updated: 2025/08/25 17:12:43 by ebella           ###   ########.fr       */
+/*   Updated: 2025/08/25 16:57:30 by ebella           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void PhoneBook::addContact(Contact contact)
 {
 	std::string line;
 	static int j = 0;
-
 	std::cout << YELLOW <<"Type your name: ";
 	std::getline(std::cin, line);
 	contact.setFirstName(line);
@@ -79,8 +78,6 @@ void PhoneBook::addContact(Contact contact)
 			break ;
 		}else if (i == 6 && contacts[7].getFirstName() != "")
 		{
-			if (j == 7)
-				j = 0;
 			contacts[j].setFirstName(contact.getFirstName());
 			contacts[j].setLastName(contact.getLastName());
 			contacts[j].setNickname(contact.getNickname());
